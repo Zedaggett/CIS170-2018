@@ -32,7 +32,7 @@ public class Car {
 		int milesLeft = maxMiles - milesTraveled;
 			if (milesTraveled < maxMiles)
 				return milesLeft/mpg;
-			else (milesTraveled > )
+			if (milesTraveled == 0)
 				return tank;
 		}
 }
