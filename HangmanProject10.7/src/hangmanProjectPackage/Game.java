@@ -4,6 +4,7 @@ public class Game {
 	
 	String word;
 	String hint;
+	public boolean isSolved;
 
 public Game(String word, String hint) 
 	{
@@ -11,10 +12,10 @@ public Game(String word, String hint)
 	this.hint = hint;
 	}
 
-public char[] toCharArray() {
-	
-	return null;
-}
+
+
+
+
 
 
 }

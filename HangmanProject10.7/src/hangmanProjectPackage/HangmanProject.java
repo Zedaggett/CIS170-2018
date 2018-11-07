@@ -19,7 +19,8 @@ public class HangmanProject {
 		games.add(g3);
 		games.add(g4);
 		games.add(g5);
-
+for (Game g : games) {
+	while (!g.isSolved) {
 		boolean playGame = true;
 
 		System.out.println("Would you like to play a game? y/n");
@@ -36,10 +37,11 @@ public class HangmanProject {
 			System.out.println("Welcome to Hangman!");
 		}
 		while (playGame) {
+			
 					boolean areWePlaying = true;
 					while (areWePlaying) {
-						Game word = games.get(0);
-						Game hint = games.get(0);
+						String word = g.word;
+						String hint = g.hint;
 						char[] letters = word.toCharArray();
 						int amountOfGuesses = letters.length;
 						char[] playerGuesses = new char[amountOfGuesses];
@@ -68,21 +70,40 @@ public class HangmanProject {
 							if (isTheWordGuessed(playerGuesses)) {
 									wordIsGuessed = true;
 									areWePlaying = true;
+									g.isSolved = true;
 									System.out.println("YOU WIN! Would you like to play again?");
 								}
 							}
 						
 						if (tries == amountOfGuesses && wordIsGuessed == false) {
 							System.out.println("GAME OVER");
-							System.out.println("You have ran out of guesses :/");
+							System.out.println("You have ran out of guesses");
 							System.out.println("Would you like to play again? y/n");
-							String anotherGame = sc.nextLine();
-							if (anotherGame.equals("n")) {
+							wordIsGuessed = false;
+							areWePlaying = false;
+							playGame = false;
+							g.isSolved = false;
+							char anotherGame = sc.nextLine().charAt(0);
+							if (anotherGame == 'n') {
+								playGame = false;
 								areWePlaying = false;
+								g.isSolved = false;
+							}
+							if (anotherGame == ' ')
+							{
+								playGame = false;
+								areWePlaying = false;
+								
+							}
+							else if (anotherGame == 'y')
+							{
+								
 							}
 					}
 					}
 		}
+	}
+}
 		}
 		
 
