@@ -16,6 +16,14 @@ public class User {
 	String eMail;
 	String address;
 	String password;
+	public static String ID;
+	
+	public static String getID() {
+		return ID;
+	}
+	public void setID(String iD) {
+		ID = iD;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

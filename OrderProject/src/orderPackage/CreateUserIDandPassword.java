@@ -1,5 +1,5 @@
 package orderPackage;
-
+import orderPackage.User;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -60,7 +60,8 @@ public class CreateUserIDandPassword {
 		textField.setBounds(217, 111, 116, 22);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
-		
+		textField.equals(User.getID());
+				
 		textField_1 = new JTextField();
 		textField_1.setBounds(217, 149, 116, 22);
 		frame.getContentPane().add(textField_1);
