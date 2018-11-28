@@ -1,5 +1,6 @@
 package orderPackage;
 
+import java.awt.Choice;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,9 +10,15 @@ import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
 
+
 public class OrderFinalDetails {
 
-	private JFrame frame;
+	Order o = new Order();
+	Address a = new Address();
+	User u = new User();
+	OrderInfo oI = new OrderInfo();
+	
+	JFrame frame;
 	private JPasswordField textField;
 	private JTextField textField_1;
 
@@ -73,10 +80,6 @@ public class OrderFinalDetails {
 		lblShippingTotal.setBounds(31, 139, 104, 16);
 		frame.getContentPane().add(lblShippingTotal);
 		
-		JTextArea textArea = new JTextArea();
-		textArea.setBounds(118, 48, 96, 22);
-		frame.getContentPane().add(textArea);
-		
 		JTextArea txtrReEnterPassword = new JTextArea();
 		txtrReEnterPassword.setEditable(false);
 		txtrReEnterPassword.setText("Confirm Password:");
@@ -102,6 +105,10 @@ public class OrderFinalDetails {
 		JButton btnCompleteOrder = new JButton("Complete Order");
 		btnCompleteOrder.setBounds(262, 106, 144, 25);
 		frame.getContentPane().add(btnCompleteOrder);
+		
+	/*	JLabel Item = new JLabel(oI.choice)
+		lblItem.setBounds(123, 48, 56, 16);
+		frame.getContentPane().add(lblItem);
+		*/
 	}
-
 }

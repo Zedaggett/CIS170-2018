@@ -1,8 +1,10 @@
 package orderPackage;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Scanner;
+
+
 public class Order {
 
 	/*
@@ -17,7 +19,19 @@ public class Order {
 	
 	
 	// reading from file to assign items
+
+	public ArrayList<String> items = new ArrayList<String>();
+	public ArrayList<String> getItems() {
+		return items;
+	};
+	public void setItems(ArrayList<String> items) {
+		this.items = items;
+	}
+	public ArrayList<Double>prices = new ArrayList<Double>();
+	public double shipping = 14.99;
+	
 	private Scanner sc;
+	
 	public void openFile() {
 		try {
 		sc = new Scanner(new File ("Items.txt"));
@@ -28,17 +42,19 @@ public class Order {
 	}
 	
 	public void readFile() {
+		
 		while (sc.hasNext()) {
-			String item = sc.next();
-			double price = sc.nextDouble();
+			
+		items.add(sc.nextLine());
+		prices.add(sc.nextDouble());
 		}
 	}
-	public String item;
-	public double price;
-	public double shipping = 14.99;
-	public int quantity[] = {1, 2, 3, 4, 5};
-	public String shippingAddress;
-	public double cost = price + shipping;
-}
+	public void closeFile() {
+		sc.close();
+	}
+	
+
+		
+	}
 
 

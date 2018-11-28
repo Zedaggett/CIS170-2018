@@ -7,10 +7,13 @@ import javax.swing.JTextArea;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class DefineUser {
 
-	private JFrame frame;
+User u = new User();
+	JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;
@@ -75,23 +78,37 @@ public class DefineUser {
 		textField.setBounds(182, 177, 116, 22);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
+		textField.equals(u.geteMail());
 		
 		textField_1 = new JTextField();
 		textField_1.setBounds(182, 209, 116, 22);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
+		textField_1.equals(u.getAddress());
 		
 		textField_2 = new JTextField();
 		textField_2.setBounds(182, 151, 116, 22);
 		frame.getContentPane().add(textField_2);
 		textField_2.setColumns(10);
+		textField_2.equals(u.getLastName());
 		
 		textField_3 = new JTextField();
 		textField_3.setBounds(182, 122, 116, 22);
 		frame.getContentPane().add(textField_3);
 		textField_3.setColumns(10);
+		textField_3.equals(u.getFirstName());
 		
 		JButton btnNext = new JButton("Next");
+		btnNext.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					OrderInfo window = new OrderInfo();
+					window.frame.setVisible(true);
+				} catch (Exception r) {
+					r.printStackTrace();
+				}
+			}
+		});
 		btnNext.setBounds(335, 228, 97, 25);
 		frame.getContentPane().add(btnNext);
 	}

@@ -1,22 +1,17 @@
 package orderPackage;
 
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JButton;
-import javax.swing.JTextPane;
+
 import javax.swing.JTextArea;
-import javax.swing.JList;
-import javax.swing.JMenuBar;
-import java.awt.ScrollPane;
-import java.awt.List;
-import java.awt.Scrollbar;
 import java.awt.Choice;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class OrderInfo {
-
-	private JFrame frame;
+	JFrame frame;
 
 	/**
 	 * Launch the application.
@@ -44,13 +39,23 @@ public class OrderInfo {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	void initialize() {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnFinalizeOrder = new JButton("Finalize Order");
+		btnFinalizeOrder.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					OrderFinalDetails window = new OrderFinalDetails();
+					window.frame.setVisible(true);
+				} catch (Exception t) {
+					t.printStackTrace();
+				}
+			}
+		});
 		btnFinalizeOrder.setBounds(307, 215, 113, 25);
 		frame.getContentPane().add(btnFinalizeOrder);
 		
@@ -69,10 +74,21 @@ public class OrderInfo {
 		frame.getContentPane().add(lblQuantity);
 		
 		Choice choice = new Choice();
+		choice.add("Pants- $39.99");
+		choice.add("Shirt- $25.99");
+		choice.add("Shoes- $29.99");
+		choice.add("Sunglasses- $2.99");
+		choice.add("Gloves- $5.99");
+		choice.add("Hat- $5.99");
 		choice.setBounds(159, 81, 146, 22);
 		frame.getContentPane().add(choice);
 		
 		Choice choice_1 = new Choice();
+		choice_1.add("1");
+		choice_1.add("2");
+		choice_1.add("3");
+		choice_1.add("4");
+		choice_1.add("5");
 		choice_1.setBounds(159, 132, 146, 22);
 		frame.getContentPane().add(choice_1);
 	}

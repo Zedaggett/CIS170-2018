@@ -2,7 +2,6 @@ package orderPackage;
 
 public class AcceptanceCriteria {
 
-	
 /*System Description: System that will create a user account, store the info,
  * and allow user to place an order after certain criteria are met. Each step will be displayed on it's own
  * User Interface. System will gather information User inputs step by step, and at the end, displaying

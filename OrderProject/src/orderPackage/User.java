@@ -1,5 +1,7 @@
 package orderPackage;
 
+import javax.swing.JTextField;
+
 public class User {
 	
 	/*
@@ -11,47 +13,48 @@ public class User {
 	 * Address
 	 */
 
-	String firstName;
-	String lastName;
-	String eMail;
-	String address;
-	String password;
-	public static String ID;
+
+	public JTextField firstName;
+	public JTextField lastName;
+	public JTextField eMail;
+	public JTextField address;
+	public JTextField password;
+	public JTextField ID;
 	
-	public static String getID() {
+	public JTextField getID() {
 		return ID;
 	}
-	public void setID(String iD) {
+	public void setID(JTextField iD) {
 		ID = iD;
 	}
-	public String getFirstName() {
+	public JTextField getFirstName() {
 		return firstName;
 	}
-	public void setFirstName(String firstName) {
+	public void setFirstName(JTextField firstName) {
 		this.firstName = firstName;
 	}
-	public String getLastName() {
+	public JTextField getLastName() {
 		return lastName;
 	}
-	public void setLastName(String lastName) {
+	public void setLastName(JTextField lastName) {
 		this.lastName = lastName;
 	}
-	public String geteMail() {
+	public JTextField geteMail() {
 		return eMail;
 	}
-	public void seteMail(String eMail) {
+	public void seteMail(JTextField eMail) {
 		this.eMail = eMail;
 	}
-	public String getAddress() {
+	public JTextField getAddress() {
 		return address;
 	}
-	public void setAddress(String address) {
+	public void setAddress(JTextField address) {
 		this.address = address;
 	}
-	public String getPassword() {
+	public JTextField getPassword() {
 		return password;
 	}
-	public void setPassword(String password) {
+	public void setPassword(JTextField password) {
 		this.password = password;
 	}
 	
