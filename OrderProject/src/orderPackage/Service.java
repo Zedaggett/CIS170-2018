@@ -51,7 +51,6 @@ public class Service {
 	ArrayList<User> Users = new ArrayList<User>();
 		
 	public static void main (String[] args) {
-		System.out.println(itemList);
 		
 		Service s = new Service();
 		User u = new User();

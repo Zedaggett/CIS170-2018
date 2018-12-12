@@ -135,7 +135,7 @@ public class OrderFinalDetails {
 		frame.getContentPane().add(lblNewLabel_1);
 		
 		JLabel lblShpadd = new JLabel(DefineUser.Address);
-		lblShpadd.setBounds(120, 111, 132, 14);
+		lblShpadd.setBounds(148, 111, 104, 14);
 		frame.getContentPane().add(lblShpadd);
 		
 		JLabel lblShptot = new JLabel("$15.99");

@@ -89,7 +89,7 @@ User u = new User();
 		textField_1.setColumns(10);
 		textField_1.equals(u.getAddress());
 		textField_1.toString();
-		Address = textField_1.getSelectedText();
+		
 		
 		
 		textField_2 = new JTextField();
@@ -109,6 +109,7 @@ User u = new User();
 			public void actionPerformed(ActionEvent e) {
 				try {
 					OrderInfo window = new OrderInfo();
+					Address = textField_1.getText();
 					window.frame.setVisible(true);
 				} catch (Exception r) {
 					r.printStackTrace();
