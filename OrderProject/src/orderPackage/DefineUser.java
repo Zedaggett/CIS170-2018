@@ -8,17 +8,19 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.ObjectInputStream.GetField;
 import java.awt.event.ActionEvent;
 
 public class DefineUser {
 
 User u = new User();
+	
 	JFrame frame;
 	private JTextField textField;
-	private JTextField textField_1;
+	public JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
-
+	public static String Address;
 	/**
 	 * Launch the application.
 	 */
@@ -80,11 +82,15 @@ User u = new User();
 		textField.setColumns(10);
 		textField.equals(u.geteMail());
 		
+		
 		textField_1 = new JTextField();
 		textField_1.setBounds(182, 209, 116, 22);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
 		textField_1.equals(u.getAddress());
+		textField_1.toString();
+		Address = textField_1.getSelectedText();
+		
 		
 		textField_2 = new JTextField();
 		textField_2.setBounds(182, 151, 116, 22);

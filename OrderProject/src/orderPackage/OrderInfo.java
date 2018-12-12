@@ -3,16 +3,25 @@ package orderPackage;
 import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JButton;
 
 import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 import java.awt.Choice;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JComboBox;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 
 public class OrderInfo {
 	JFrame frame;
-
+	public static String userChoice1;
+	public static String userChoice2;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -74,14 +83,18 @@ public class OrderInfo {
 		frame.getContentPane().add(lblQuantity);
 		
 		Choice choice = new Choice();
-		choice.add("Pants- $39.99");
-		choice.add("Shirt- $25.99");
-		choice.add("Shoes- $29.99");
-		choice.add("Sunglasses- $2.99");
-		choice.add("Gloves- $5.99");
-		choice.add("Hat- $5.99");
+		choice.add("Shirt - $12.99");
+		choice.add("Pants - $20.99");
+		choice.add("Jacket - $35.99");
+		choice.add("Shoes - $25.99");
+		choice.add("Gloves - $15.00");
+		choice.add("Hat - $10.00");
+		choice.add("Watch - $6.00");
+		choice.add("Suglasses - $5.00");
 		choice.setBounds(159, 81, 146, 22);
 		frame.getContentPane().add(choice);
+		userChoice1 = choice.getSelectedItem();
+		
 		
 		Choice choice_1 = new Choice();
 		choice_1.add("1");
@@ -91,5 +104,7 @@ public class OrderInfo {
 		choice_1.add("5");
 		choice_1.setBounds(159, 132, 146, 22);
 		frame.getContentPane().add(choice_1);
+		userChoice2 = choice_1.getSelectedItem();
+		
 	}
 }

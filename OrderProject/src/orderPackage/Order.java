@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import java.util.Scanner;
 
+import javax.swing.JList;
+
 
 public class Order {
 
@@ -21,13 +23,9 @@ public class Order {
 	// reading from file to assign items
 
 	public ArrayList<String> items = new ArrayList<String>();
-	public ArrayList<String> getItems() {
-		return items;
-	};
-	public void setItems(ArrayList<String> items) {
-		this.items = items;
-	}
 	public ArrayList<Double>prices = new ArrayList<Double>();
+	public static JList<String>itemList;
+	public JList<Double>priceList;
 	public double shipping = 14.99;
 	
 	private Scanner sc;
@@ -46,11 +44,17 @@ public class Order {
 		while (sc.hasNext()) {
 			
 		items.add(sc.nextLine());
+		String[] str = new String[items.size()];
+		
+	
 		prices.add(sc.nextDouble());
+		
+		itemList = new JList<>(items.toArray(str));
+		priceList = new JList<>((Double[]) prices.toArray());
+
+		
+		
 		}
-	}
-	public void closeFile() {
-		sc.close();
 	}
 	
 

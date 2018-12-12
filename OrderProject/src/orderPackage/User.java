@@ -17,7 +17,7 @@ public class User {
 	public JTextField firstName;
 	public JTextField lastName;
 	public JTextField eMail;
-	public JTextField address;
+	public static JTextField address;
 	public JTextField password;
 	public JTextField ID;
 	

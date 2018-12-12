@@ -16,10 +16,10 @@ import java.awt.event.ActionEvent;
 public class CreateUserIDandPassword {
 
 	User u = new User();
-	private JFrame frame;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JPasswordField passwordField;
+	JFrame frame;
+	public JTextField textField;
+	public JTextField textField_1;
+	public static JPasswordField passwordField;
 
 	/**
 	 * Launch the application.
@@ -92,6 +92,7 @@ public class CreateUserIDandPassword {
 		passwordField.setBounds(217, 184, 116, 22);
 		frame.getContentPane().add(passwordField);
 		passwordField = (JPasswordField) u.password;
+		
 		
 		JLabel lblConfirmPassword = new JLabel("Confirm Password");
 		lblConfirmPassword.setBounds(77, 187, 116, 16);
